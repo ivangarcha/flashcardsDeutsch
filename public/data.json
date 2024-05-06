@@ -1,0 +1,32 @@
+[
+  {
+    "palabra": "Hallo",
+    "traduccion": "Hola",
+    "categoria": "palabras",
+    "info": "Se emplea para saludar"
+  },
+  {
+    "palabra": "Tschus",
+    "traduccion": "Adios",
+    "categoria": "palabras",
+    "info": "Se emplea para despedirse informalmente"
+  },
+  {
+    "palabra": "Spielen",
+    "traduccion": "Jugar",
+    "categoria": "verbos",
+    "info": ""
+  },
+  {
+    "palabra": "Aber",
+    "traduccion": "Pero",
+    "categoria": "conectores",
+    "info": "Se emplea para saludar"
+  },
+  {
+    "palabra": "Das Büch",
+    "traduccion": "El libro",
+    "categoria": "sustantivos",
+    "info": "El plural es irregular. Die Bucher"
+  }
+]
