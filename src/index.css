@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: linear-gradient(#000, #f53b3b, #f69d3c);
+  background-attachment: fixed;
+  /* Fondo fijo */
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.container header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filters label {
+  font-size: 12px;
+  margin: 10px 5px;
+}
+
+.filters label>input {
+  border-radius: 0;
+  font-size: 20px;
+  margin: 10px
+}
+
+.add {
+  padding: 5px;
+  width: 60px;
+  border-radius: 8px;
+  border-color: transparent;
+  margin-top: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+  background-color: green;
+  font-size: 12px;
+}
+
+.random {
+  padding: 5px;
+  width: 60px;
+  border-radius: 8px;
+  border-color: transparent;
+  margin-top: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+  background-color: blue;
+  font-size: 12px;
+}
+
+.formulario-add {
+  margin-top: 10vh;
+  position: absolute;
+  z-index: 5;
+  left: 50vw;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  font-size: 10px;
+  width: 300px;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  box-shadow: 16px 16px rgba(0, 0, 0, .2);
+  border-color: transparent;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.formulario-add:hover {
+  box-shadow: none;
+  border-color: #000;
+}
+
+.formulario-add .inputFields {
+  gap: 5px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.formulario-add .inputFields input {
+  font-size: 10px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.formulario-add .inputFields input:focus {
+  border-color: #f69d3c;
+}
+
+.formulario-add .inputFields textarea {
+  resize: none;
+  font-size: 10px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.formulario-add fieldset {
+  font-size: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.formulario-add fieldset input {
+  margin-right: 5px;
+}
+
+.save {
+  display: flex;
+  justify-content: space-between;
+}
+
+.saveBtn {
+  padding: 5px;
+  width: 75px;
+  border-radius: 8px;
+  border-color: transparent;
+  margin-top: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+  background-color: green;
+  font-size: 10px;
+}
+
+.cancelBtn {
+  padding: 10px;
+  width: 75px;
+  border-radius: 8px;
+  border-color: transparent;
+  margin-top: 10px;
+  color: #fff;
+  margin-bottom: 5px;
+  background-color: blue;
+  font-size: 10px;
+}
+
+.cards {
+  font-size: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.cards .card {
+  font-size: 8px;
+  width: calc(50% - 8px);
+  /* Por ejemplo, 2 columnas con un espacio de 16px entre ellas */
+  max-width: 150px;
+  /* Ancho máximo para evitar que las tarjetas se estiren demasiado */
+  width: 150px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 16px 16px rgba(0, 0, 0, .2);
+  transition: all 0.3s ease-in;
+  border-color: transparent;
+}
+
+.cards .card>h2 {
+  text-align: center;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.cards .card:hover {
+  box-shadow: none;
+  border-color: #000;
+}
+
+.cards .card .showBtn {
+  margin: auto;
+  padding: 5px;
+  border-radius: 8px;
+  border-color: transparent;
+  margin-top: 5px;
+  color: #fff;
+  margin-bottom: 5px;
+  background-color: green;
+  font-size: 10px;
+}
+
+.cards .card {
+  transition: all 0.3s ease-in-out;
+  max-height: 1000px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.cards .card .invisible {
+  max-height: 0;
+  /* Reduce la altura de la tarjeta cuando está colapsada */
+  padding-top: 0;
+  /* Opcional: elimina el relleno superior */
+  padding-bottom: 0;
+  /* Opcional: elimina el relleno inferior */
+}
+
+.cards .card .invisible {
+  visibility: hidden;
+}
+
+
+@media only screen and (width < 1240px) {
+
+  .add,
+  .random {
+    font-size: small;
+    width: fit-content;
+  }
+
+  .filters {
+    gap: 10px;
+  }
+
+  .filters label {
+    font-size: 14px;
+    margin: 10px 5px;
+  }
+
+  .filters label>input {
+    border-radius: 0;
+    font-size: 18px;
+    margin: 5px
+  }
+}
+
+.footer {
+  font-size: large;
+  width: fit-content;
+  padding: 29px;
+  background-color: #fff;
+  margin-bottom: 0;
+  position: fixed;
+}
+
+@media only screen and (width < 768px) {
+  .filters {
+    font-size: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .filters label {
+    margin: 0;
+  }
+}
